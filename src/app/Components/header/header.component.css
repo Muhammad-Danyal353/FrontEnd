@@ -1,0 +1,148 @@
+.header {
+  background-color: #ff6f61;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
+
+.nav ul li:last-child {
+  margin-right: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.search input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search button {
+  background-color: #ffa600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #ff8300;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  .search {
+    flex: 1;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+/*for tag buttun     <!-- //code for tag filter -->
+*/
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.route {
+  background-color: whitesmoke;
+  padding: 0.3rem 1rem;
+  margin: 0.2rem 0.5rem;
+  border-radius: 10rem;
+  font-size: 12px;
+  color: blue;
+}
+/* CSS for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* CSS for the dropdown toggle button */
+.dropdown-toggle {
+  background-color: #ffffff;
+  color: #333;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* CSS for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* CSS to show the dropdown content when the dropdown is hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CSS for individual tags in the dropdown */
+.route {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.route:last-child {
+  border-bottom: none;
+}
+
+.route:hover {
+  background-color: #f1f1f1;
+}
+.tagbutton {
+  margin-right: 10px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.badge {
+  background: #003cff;
+  padding: 2px 7px;
+  border-radius: 51%;
+  position: relative;
+  top: -7px;
+  right: 10px;
+}

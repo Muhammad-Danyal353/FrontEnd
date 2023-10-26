@@ -1,0 +1,11 @@
+<p>Product Details:</p>
+<div *ngIf="foods">
+  <div>
+    <Div><img class="image" src="{{ foods.imageUrl }}" alt="" /></Div>
+    <div><strong>Name:</strong> {{ foods.name }}</div>
+    <div><strong>Price:</strong> {{ foods.price }}</div>
+    <div><strong>Origins:</strong> {{ foods.origins }}</div>
+  </div>
+  <button (click)="addToCart(foods)" class="buuton">Add To Cart</button>
+</div>
+<div *ngIf="!foods">Product not found</div>

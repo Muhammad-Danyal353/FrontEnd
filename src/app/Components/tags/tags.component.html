@@ -1,0 +1,15 @@
+<div class="main" *ngIf="tags">
+  <div class="dropdown">
+    <div class="dropdown-toggle" style="cursor: pointer">Tags</div>
+    <div class="dropdown-content">
+      <div
+        class="route"
+        *ngFor="let tag of tags"
+        routerLink="/tag/{{ tag.name }}"
+        style="cursor: pointer"
+      >
+        {{ tag.name }} ({{ tag.count }})
+      </div>
+    </div>
+  </div>
+</div>

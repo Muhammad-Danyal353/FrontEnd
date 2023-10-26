@@ -1,0 +1,27 @@
+<app-title title="Cart Page" margin="1rem 0 1rem 0.2rem"></app-title>
+
+<div class="cart-item">
+  <ul>
+    <li *ngFor="let cartItem of cart.items">
+      <div>
+        <img
+          src="{{ cartItem.food.imageUrl }}"
+          alt="{{ cartItem.food.name }}"
+        />
+        <div>
+          {{ cartItem.price | currency }}
+        </div>
+        <div>
+          <a routerLink="/product/{{ cartItem.food.id }}">
+            {{ cartItem.food.name }}
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- <div *ngFor="let food of foods">
+  <img [src]="{{foods.imageUrl}}" alt="" />
+  <p>Id:{{ food.id }}</p>
+  <p>Quantity:{{ food.quantity }}</p>
+</div> -->

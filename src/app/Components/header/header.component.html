@@ -1,0 +1,52 @@
+<div class="body">
+  <header class="header">
+    <div class="logo" style="cursor: pointer" routerLink="">Foodie Delight</div>
+    <nav class="nav">
+      <ul>
+        <li><a routerLink="/" style="cursor: pointer">Home</a></li>
+        <li><a routerLink="/Menu" style="cursor: pointer">Menu</a></li>
+        <li><a routerLink="/profile" style="cursor: pointer">Profile</a></li>
+        <li><a routerLink="/orders" style="cursor: pointer">Orders</a></li>
+        <li>
+          <a routerLink="/cart" style="cursor: pointer"
+            >Cart
+            <span *ngIf="cartService.cart.items.length > 0" class="badge">{{
+              cartService.cart.items.length
+            }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- //code for tag filter -->
+    <div class="tagbutton">
+      <div class="main" *ngIf="tags">
+        <div class="dropdown">
+          <div class="dropdown-toggle" style="cursor: pointer">
+            Filter By Tags
+          </div>
+          <div class="dropdown-content">
+            <div
+              class="route"
+              *ngFor="let tag of tags"
+              routerLink="/tag/{{ tag.name }}"
+              style="cursor: pointer"
+            >
+              {{ tag.name }} ({{ tag.count }})
+            </div>
+          </div>
+        </div>
+        <!-- //code for tag filter -->
+      </div>
+      <div class="search">
+        <input
+          #s
+          type="text"
+          placeholder="Search Food..."
+          (keyup.enter)="search(s.value)"
+        />
+
+        <button (click)="search(s.value)">Search</button>
+      </div>
+    </div>
+  </header>
+</div>
